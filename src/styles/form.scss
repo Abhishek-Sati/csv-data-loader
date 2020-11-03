@@ -1,0 +1,67 @@
+.form_wrapper {
+  grid-column: center-start/center-end;
+  display: grid;
+  row-gap: 8rem;
+  margin: 4rem 0;
+  &__stepper {
+    grid-column: 4/13;
+  }
+  &__buttons {
+    grid-column: 7/10;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  &__form {
+    grid-column: 5/10;
+  }
+  &__document_upload {
+    display: grid;
+    justify-items: center;
+    row-gap: 2rem;
+    text-align: center;
+    grid-column: 5/12;
+    & > span {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      & > .ant-upload-list-picture-card {
+        margin-top: 2rem;
+        & ::before {
+          left: 0;
+        }
+      }
+    }
+    &__btn {
+      width: 50%;
+    }
+    &__img {
+      width: 20rem;
+      height: 30rem;
+    }
+    &__checkbox {
+      font-size: 1.5rem;
+      color: $primaryColor;
+      margin: 2rem 0 0;
+      & :hover {
+        & > span > .ant-checkbox-inner {
+          border-color: $primaryColor;
+        }
+      }
+      & > .ant-checkbox-checked > .ant-checkbox-inner {
+        background-color: $primaryColor;
+        color: $primaryColor;
+        border-color: $primaryColor;
+      }
+    }
+  }
+  &__prev_btn {
+    grid-column: 5/6;
+  }
+  &__next_btn {
+    grid-column: 11/12;
+  }
+}
+
+.ant-upload-list-text {
+  display: none !important;
+}
